@@ -1,0 +1,69 @@
+{
+    "chart": {
+        "result": [
+            {
+                "meta": {
+                    "currency": "INR",
+                    "symbol": "SUJANAUNI.NS",
+                    "exchangeName": "NSI",
+                    "instrumentType": "EQUITY",
+                    "firstTradeDate": 1203392700,
+                    "regularMarketTime": 1612259247,
+                    "gmtoffset": 19800,
+                    "timezone": "IST",
+                    "exchangeTimezoneName": "Asia/Kolkata",
+                    "regularMarketPrice": 0.35,
+                    "chartPreviousClose": 0.3,
+                    "previousClose": 0.3,
+                    "scale": 3,
+                    "priceHint": 4,
+                    "currentTradingPeriod": {
+                        "pre": {
+                            "timezone": "IST",
+                            "start": 1627616700,
+                            "end": 1627616700,
+                            "gmtoffset": 19800
+                        },
+                        "regular": {
+                            "timezone": "IST",
+                            "start": 1627616700,
+                            "end": 1627639200,
+                            "gmtoffset": 19800
+                        },
+                        "post": {
+                            "timezone": "IST",
+                            "start": 1627639200,
+                            "end": 1627639200,
+                            "gmtoffset": 19800
+                        }
+                    },
+                    "tradingPeriods": {
+                        "pre": [],
+                        "post": []
+                    },
+                    "dataGranularity": "5m",
+                    "range": "",
+                    "validRanges": [
+                        "1d",
+                        "5d",
+                        "1mo",
+                        "3mo",
+                        "6mo",
+                        "1y",
+                        "2y",
+                        "5y",
+                        "10y",
+                        "ytd",
+                        "max"
+                    ]
+                },
+                "indicators": {
+                    "quote": [
+                        {}
+                    ]
+                }
+            }
+        ],
+        "error": null
+    }
+}

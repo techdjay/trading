@@ -1,0 +1,38 @@
+{
+    "fuck": "fuck",
+    "crypts1" : ["XRP","LINK","ETH","BTC","EOS","DOGE","ZEC","BCH","LOL","LTC","MATIC","UNI","1INCH","FIL","IOST","AAVE","QTUM","SUSHI","NODE","ADA","MX","SWFTC","STORJ","TRX","ETC","ZEN","XMR","SHIB","TITAN","GOF","BADGER","SOL","VET","ATOM","BSV","HT","FTI","FTT"],
+    "crypts2" : ["XRP","LINK","ETH","BTC","EOS","DOGE","ZEC","BCH","LOL","LTC","MATIC","UNI","1INCH","FIL","IOST","ADA","AAVE","QTUM","SUSHI","NODE","MX","SWFTC","STORJ","TRX","ETC","ZEN","XMR","SHIB","TITAN","BADGER","SOL","VET","ATOM","BSV"],
+	"crypts" : ["SBIN","BASF", "BASML", "BATAINDIA", "BAYERCROP", "BBL"],
+
+    "601": ["LINK","XRP","ETH","BTC","EOS","ZEC","BCH","BSV","LTC","DOGE","SHIB","VET","MATIC","ETC","SUSHI","ATOM","ADA","AAVE","SOL","QTUM"],
+    "60": ["XRP","ETH","EOS","ZEC","BCH","LTC","DOGE","SHIB","MATIC","AAVE","DOT","SUSHI","SBIN","BASF", "BASML", "BATAINDIA", "BAYERCROP", "BBL"],
+
+    "synth1": {"30":["30X4","30X2","30X1","30X3","30X6","30X8"],"15": ["15X1"],"5": ["5X1","5X2","5X3","5X4","5X5","5X6","5X7","5X8"]},
+    "synth2": {"15": ["15X1"],"30":["30X4","30X6","30X8","30X1","30X2"]},
+    "synth3": {"15": ["15X1"],"30":["30X4","30X1","30X6","30X8","30X2"]},
+    "synth": {"5":["5X1"],"15": ["15X1"],"30":["30X4","30X1","30X8","30X2"]},
+    "15": ["EOS","BCH","LTC","XRP","DOGE"],
+    "30": ["XRP","ETH","EOS","ZEC","BCH","LTC","DOGE","SHIB","MATIC","AAVE","DOT","SUSHI"],
+       "5":["BCH","XRP","SBIN","BASF", "BASML", "BATAINDIA", "BAYERCROP", "BBL"],
+    "simple1": {
+        "15": ["XRP","EOS","BCH","LTC","DOGE","SHIB","MATIC","SUSHI","LINK"],
+        "30": ["XRP","EOS","BCH","LTC","DOGE","SHIB","MATIC","SUSHI","LINK"]
+    },
+    "simple": {
+        "30": ["XRP","ETH","EOS","ZEC","BCH","LTC","DOGE","SHIB","MATIC","AAVE","DOT","SUSHI","LINK"],
+        "15": ["XRP","ETH","EOS","ZEC","BCH","LTC","DOGE","SHIB","MATIC","AAVE","DOT","SUSHI","LINK"]
+    },
+    "clip": {"30":[2,4,8]},
+    "overlap": ["15X2","15X3","15X4","15X1","5X3","5X4","5X5","5X6","5X7","5X8","30X4","30X2","30X3","30X1","30X6","30X5","30X8","30X7","30X2"],
+    "cross_vct": ["15X1","30X1","30X2","5X1"],
+    "cross_pch": [],
+    "email1": ["XRP","EOS","DOGE","SHIB","MATIC","SUSHI"],
+    "email": ["SUSHI30X2","SHIB30X2","XRP30X2","EOS30X2","3MATIC0X2"],
+    "alarm2": ["XRP","EOS","DOGE","SHIB","MATIC","SUSHI"],
+    "alarm": ["SUSHI30X2","SHIB30X2","XRP30X2","EOS30X2","3MATIC0X2"],
+    "exclud": ["15X","30X1"],
+    "deltas": [2,3,4],
+    "warndir": "newdict.json",
+    "watch": ["%30X1","%30X2","%15X1","%30X4","%30X6","%30X8"]
+
+}

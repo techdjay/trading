@@ -1,0 +1,40 @@
+import yfinance as yf
+import pandas as pd
+from win32com.client import Dispatch
+AmiBroker = Dispatch("Broker.Application")
+#AmiBroker.visible = True
+#AmiBroker.LoadDatabase('C:/AmiFeeds/Amibroker/AFData')
+#Daily EOD Data Symbols (1256)
+tickerStrings = ["RELCAPITAL.NS", "RELIGARE.NS", "RELINFRA.NS", "REMSONSIND.NS", "RENUKA.NS", "REPCOHOME.NS", "REPL.NS", "REPRO.NS", "REVATHI.NS", "RGL.NS", "RHFL.NS", "RICOAUTO.NS", "RIIL.NS", "RKDL.NS", "RKEC.NS", "RKFORGE.NS", "RML.NS", "ROHLTD.NS", "ROLLT.NS", "ROLTA.NS", "ROML.NS", "ROSSELLIND.NS", "RPGLIFE.NS", "RPOWER.NS", "RPPINFRA.NS", "RPSGVENT.NS", "RSSOFTWARE.NS", "RSWM.NS", "RSYSTEMS.NS", "RTNINDIA.NS", "RTNPOWER.NS", "RUBYMILLS.NS", "RUCHI.NS", "RUCHINFRA.NS", "RUCHIRA.NS", "RUPA.NS", "RUSHIL.NS", "RVHL.NS", "S&SPOWER.NS", "SABEVENTS.NS", "SADBHAV.NS", "SADBHIN.NS", "SAFARI.NS", "SAGARDEEP.NS", "SAGCEM.NS", "SAKAR.NS", "SAKHTISUG.NS", "SAKSOFT.NS", "SAKUMA.NS", "SALASAR.NS", "SALONA.NS", "SALSTEEL.NS", "SALZERELEC.NS", "SAMBHAAV.NS", "SANCO.NS", "SANDESH.NS", "SANDHAR.NS", "SANGAMIND.NS", "SANGHIIND.NS", "SANGHVIMOV.NS", "SANGINITA.NS", "SARDAEN.NS", "SAREGAMA.NS", "SARLAPOLY.NS", "SASKEN.NS", "SASTASUNDR.NS", "SATIA.NS", "SATIN.NS", "SBCL.NS", "SBIETFIT.NS", "SBIETFPB.NS", "SBIETFQLTY.NS", "SCAPDVR.NS", "SCHAND.NS", "SDBL.NS", "SEAMECLTD.NS", "SECURKLOUD.NS", "SELAN.NS", "SEPOWER.NS", "SESHAPAPER.NS", "SETCO.NS", "SETF10GILT.NS", "SETFNIF50.NS", "SETFNIFBK.NS", "SETFNN50.NS", "SETUINFRA.NS", "SEYAIND.NS", "SGL.NS", "SHAKTIPUMP.NS", "SHALBY.NS", "SHALPAINTS.NS", "SHANKARA.NS", "SHANTIGEAR.NS", "SHARDAMOTR.NS", "SHAREINDIA.NS", "SHARIABEES.NS", "SHEMAROO.NS", "SHIL.NS", "SHIVAMAUTO.NS", "SHIVAMILLS.NS", "SHIVATEX.NS", "SHK.NS", "SHRADHA.NS", "SHREDIGCEM.NS", "SHREEPUSHK.NS", "SHREERAMA.NS", "SHRENIK.NS", "SHREYANIND.NS", "SHREYAS.NS", "SHRIPISTON.NS", "SHRIRAMEPC.NS", "SHYAMCENT.NS", "SHYAMMETL.NS", "SICAL.NS", "SIGIND.NS", "SIL.NS", "SILGO.NS", "SILINV.NS", "SILLYMONKS.NS", "SIMBHALS.NS", "SIMPLEXINF.NS", "SINTERCOM.NS", "SINTEX.NS", "SIRCA.NS", "SITINET.NS", "SIYSIL.NS", "SKIL.NS", "SKIPPER.NS", "SKMEGGPROD.NS", "SMARTLINK.NS", "SMCGLOBAL.NS", "SMLISUZU.NS", "SMSLIFE.NS", "SMSPHARMA.NS", "SNOWMAN.NS", "SOMANYCERA.NS", "SOMATEX.NS", "SOMICONVEY.NS", "SONACOMS.NS", "SORILINFRA.NS", "SOTL.NS", "SOUTHBANK.NS", "SOUTHWEST.NS", "SPAL.NS", "SPECIALITY.NS", "SPENCERS.NS", "SPIC.NS", "SPLIL.NS", "SPMLINFRA.NS", "SPTL.NS", "SREEL.NS", "SREINFRA.NS", "SRHHYPOLTD.NS", "SRIPIPES.NS", "SRPL.NS", "SSWL.NS", "STARPAPER.NS", "STCINDIA.NS", "STEELCITY.NS", "STEELXIND.NS", "STEL.NS", "STERTOOLS.NS", "STOVEKRAFT.NS", "SUBCAPCITY.NS", "SUBEXLTD.NS", "SUBROS.NS", "SUMEETINDS.NS", "SUMIT.NS", "SUMMITSEC.NS", "SUNDARAM.NS", "SUNDARMHLD.NS", "SUNDRMBRAK.NS", "SUNFLAG.NS", "SUPERHOUSE.NS", "SUPERSPIN.NS", "SUPPETRO.NS", "SUPREMEENG.NS", "SURANASOL.NS", "SURANAT&P.NS", "SURYALAXMI.NS", "SURYAROSNI.NS", "SURYODAY.NS", "SUTLEJTEX.NS", "SUULD.NS", "SUVEN.NS", "SUVIDHAA.NS", "SVPGLOB.NS", "SWARAJENG.NS", "SWELECTES.NS", "TAINWALCHM.NS", "TAJGVK.NS", "TAKE.NS", "TALBROAUTO.NS", "TANLA.NS", "TARAPUR.NS", "TARC.NS", "TARMAT.NS", "TATAMETALI.NS", "TATASTLBSL.NS", "TATASTLLP.NS", "TBZ.NS", "TCI.NS", "TCIDEVELOP.NS", "TCIFINANCE.NS", "TCPLPACK.NS", "TDPOWERSYS.NS", "TECHIN.NS", "TECHNOE.NS", "TEJASNET.NS", "TEMBO.NS", "TERASOFT.NS", "TEXINFRA.NS", "TEXMOPIPES.NS", "TEXRAIL.NS", "TFCILTD.NS", "TFL.NS", "TGBHOTELS.NS", "THANGAMAYL.NS", "THEINVEST.NS", "THEMISMED.NS", "THOMASCOOK.NS", "THOMASCOTT.NS", "TI.NS", "TIDEWATER.NS", "TIIL.NS", "TIJARIA.NS", "TIL.NS", "TIMESGTY.NS", "TIMETECHNO.NS", "TINPLATE.NS", "TIPSINDLTD.NS", "TIRUMALCHM.NS", "TIRUPATIFL.NS", "TMRVL.NS", "TNPETRO.NS", "TNPL.NS", "TNTELE.NS", "TOKYOPLAST.NS", "TOTAL.NS", "TOUCHWOOD.NS", "TPLPLASTEH.NS", "TREEHOUSE.NS", "TREJHARA.NS", "TRF.NS", "TRIGYN.NS", "TRIL.NS", "TRIVENI.NS", "TTKHLTCARE.NS", "TTL.NS", "TTML.NS", "TVSELECT.NS", "TVSSRICHAK.NS", "TVTODAY.NS", "TVVISION.NS", "TWL.NS", "UCALFUEL.NS", "UFO.NS", "UGARSUGAR.NS", "UJAAS.NS", "UMANGDAIRY.NS", "UMESLTD.NS", "UNICHEMLAB.NS", "UNIDT.NS", "UNIENTER.NS", "UNITEDTEA.NS", "UNIVASTU.NS", "UNIVCABLES.NS", "UNIVPHOTO.NS", "URJA.NS", "USHAMART.NS", "UTIBANKETF.NS", "UTINEXT50.NS", "UTINIFTETF.NS", "UTISENSETF.NS", "UTISXN50.NS", "UTTAMSTL.NS", "UTTAMSUGAR.NS", "V2RETAIL.NS", "VADILALIND.NS", "VAISHALI.NS", "VARDHACRLC.NS", "VARDMNPOLY.NS", "VASCONEQ.NS", "VASWANI.NS", "VENUSREM.NS", "VERTOZ.NS", "VESUVIUS.NS", "VETO.NS", "VHL.NS", "VIDHIING.NS", "VIJIFIN.NS", "VIKASECO.NS", "VIKASLIFE.NS", "VIKASPROP.NS", "VIKASWSP.NS", "VIMTALABS.NS", "VINDHYATEL.NS", "VINEETLAB.NS", "VINYLINDIA.NS", "VIPCLOTHNG.NS", "VIPULLTD.NS", "VISAKAIND.NS", "VISASTEEL.NS", "VISHAL.NS", "VISHNU.NS", "VISHWARAJ.NS", "VIVIDHA.NS", "VIVIMEDLAB.NS", "VLSFINANCE.NS", "VOLTAMP.NS", "VRLLOG.NS", "VSSL.NS", "VSTTILLERS.NS", "WABAG.NS", "WALCHANNAG.NS", "WANBURY.NS", "WATERBASE.NS", "WEALTH.NS", "WEBELSOLAR.NS", "WEIZMANIND.NS", "WELENT.NS", "WELINV.NS", "WENDT.NS", "WHEELS.NS", "WILLAMAGOR.NS", "WINDMACHIN.NS", "WIPL.NS", "WONDERLA.NS", "WORTH.NS", "WSI.NS", "WSTCSTPAPR.NS", "XCHANGING.NS", "XELPMOC.NS", "XPROINDIA.NS", "YAARII.NS", "ZEELEARN.NS", "ZEEMEDIA.NS", "ZENITHEXPO.NS", "ZENITHSTL.NS", "ZENTEC.NS", "ZODIACLOTH.NS", "ZODJRDMKJ.NS", "ZOTA.NS", "ZUARI.NS", "ZUARIGLOB.NS"]
+#df_list = list()
+for i in range(len(tickerStrings)):
+    data = yf.download(tickerStrings[i], start="2021-08-16", end="2021-08-19", interval="1d", threads=True)
+    symbol = tickerStrings[i].split('.')[0]  # remove .NS
+    data['ticker'] = symbol # add this column becasue the dataframe doesn't contain a column with the ticker
+    data.to_csv(f'eodticker.txt', sep='\t', mode='w', header=False, index=True)  # ticker_AAPL.csv for example
+    print(tickerStrings[i], 'data saved')
+    path = 'C:\\Users\\Jay\\Desktop\\Trading\\stock-market-scraper-master-yahoo\\eodticker.txt'
+    AmiBroker.Import(0, path, "yfinanceeod.format")
+    #AmiBroker.RefreshAll()
+    #AmiBroker.SaveDatabase()
+    print(tickerStrings[i], 'Data imported successfully')
+#df.to_csv('ticker.csv')
+AmiBroker.RefreshAll()
+AmiBroker.SaveDatabase()
+#Datetime	Open	High	Low	Close	Adj Close	Volume	ticker
+# Connect to database (Note: The package psychopg2 is required for Postgres to work with SQLAlchemy)
+#engine = sqlalchemy.create_engine("postgresql://postgres:postgres@localhost/yahoo")
+#engine = create_engine('postgresql+psycopg2://postgres:postgres@localhost/yahoo')
+
+# data1 = pd.DataFrame(data)
+# # dataframe type to type str IO buffer
+# output = StringIO()
+# data1.to_csv(output, sep='\t', index=True, header=False)
+# output1 = output.getvalue()
+#
+# conn = psycopg2.connect(host='localhost', user='postgres', password='postgres', database='yahoo')
+# cur = conn.cursor()
+# cur.copy_from(StringIO(output1), 'stockdata')
+# conn.commit()
+#
+# print('done')

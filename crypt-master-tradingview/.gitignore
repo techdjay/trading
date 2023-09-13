@@ -1,0 +1,17 @@
+.idea
+.ipynb_checkpoints
+data
+analysis1
+analysis
+analysis3
+analysis2
+data1
+warn
+blocks
+blocks1
+blocks2
+data2
+analysis-plot
+*.zip
+/WARNING.json
+/core/WARNING1.json

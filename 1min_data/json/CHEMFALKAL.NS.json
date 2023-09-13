@@ -1,0 +1,62 @@
+{
+    "chart": {
+        "result": [
+            {
+                "meta": {
+                    "currency": null,
+                    "symbol": "CHEMFALKAL.NS",
+                    "exchangeName": "YHD",
+                    "instrumentType": "MUTUALFUND",
+                    "firstTradeDate": null,
+                    "regularMarketTime": 1561759658,
+                    "gmtoffset": -14400,
+                    "timezone": "EDT",
+                    "exchangeTimezoneName": "America/New_York",
+                    "priceHint": 2,
+                    "currentTradingPeriod": {
+                        "pre": {
+                            "timezone": "EDT",
+                            "start": 1627545600,
+                            "end": 1627565400,
+                            "gmtoffset": -14400
+                        },
+                        "regular": {
+                            "timezone": "EDT",
+                            "start": 1627565400,
+                            "end": 1627588800,
+                            "gmtoffset": -14400
+                        },
+                        "post": {
+                            "timezone": "EDT",
+                            "start": 1627588800,
+                            "end": 1627603200,
+                            "gmtoffset": -14400
+                        }
+                    },
+                    "dataGranularity": "1d",
+                    "range": "",
+                    "validRanges": [
+                        "1mo",
+                        "3mo",
+                        "6mo",
+                        "ytd",
+                        "1y",
+                        "2y",
+                        "5y",
+                        "10y",
+                        "max"
+                    ]
+                },
+                "indicators": {
+                    "quote": [
+                        {}
+                    ],
+                    "adjclose": [
+                        {}
+                    ]
+                }
+            }
+        ],
+        "error": null
+    }
+}
